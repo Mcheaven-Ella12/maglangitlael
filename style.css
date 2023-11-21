@@ -1,0 +1,119 @@
+details{
+  text-align: right;
+  border-radius: 40px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
+  transition: 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 1.3em 3em;
+  color: bisque;
+  font-style: italic;
+
+}
+details:hover{
+    background-color: #d93b82;
+    box-shadow: 0px 15px 20px rgb(170, 0, 217);
+    color:#ffffff;
+    transform: translate(-7px);
+}
+details:active{
+    transform: translate(-1px);
+}
+
+body{
+    background-image: url("ell1.jpg");
+    height: 50%;
+    background-position: center;
+    background-size: cover;
+}
+body .container{
+    display: flex;
+    place-items: center;
+}
+body .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10px;
+
+}
+
+h1{
+    font-size: 12px;
+    font-style: cursive;
+    font-style: oblique;
+}
+ body .box{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1000%) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+
+    }
+
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    align-items: center;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)* 45deg)) translateZ(200px);
+    -webkit-box-reflect: below 100px linear-gradient(transparent, transparent,#0004);
+    margin-top: 30vh;
+
+}
+.box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    align-items: center;
+    border-radius: 35px;
+    
+}
+.box span img:hover{
+    background-color: #3bd9d9;
+    box-shadow: 0px 15px 20px rgba(0, 22, 217, 0.993);
+}
+ul{
+    float: right;
+    margin: -2px;
+    color: black;
+
+    
+}
+li{
+    display: inline-block;
+    margin: 2px;
+
+}
+li:hover{
+    color: rgb(0, 255, 72);
+    
+}
+
+
+
